@@ -50,13 +50,55 @@ This initiative facilitates online appointment requests for clients or patients 
 
 # GET STARTED
 
-1. Open your XAMPP Control Panel and start Apache and MySQL.
-2. Extract the downloaded source code zip file.
-3. Copy the extracted source code folder and paste it into the XAMPP's "htdocs" directory.
-4. Browse the PHPMyAdmin in a browser. i.e. http://localhost/phpmyadmin
-5. Create a new database named `edoc`.
-6. Import the provided SQL file. The file is known as DATABASE edoc.sql located inside the source code root folder.
-7. Browse the Doctor's Appointment System in a browser. i.e. http://localhost/edoc-echanneling-main/.
+### Deploying to Vercel with Supabase (Serverless / Cloud)
+
+#### 1. Set Up Supabase Database
+1. Go to [Supabase](https://supabase.com) and create a new project.
+2. In your Supabase dashboard, open the **SQL Editor** from the left navigation menu.
+3. Open [`supabase_schema.sql`](supabase_schema.sql) in this repository, copy its contents, paste them into the SQL Editor, and click **Run**. This will create all necessary tables, sequence synchronizers, and default seed data.
+4. In Supabase, navigate to **Project Settings** -> **Database**.
+5. Under **Connection string**, select **URI** (choose either Direct connection on port `5432` or Transaction Pooler on port `6543`). Copy this URI string (replace `[YOUR-PASSWORD]` with your actual Supabase database password).
+
+#### 2. Configure Environment Variables
+You can deploy using either the **Vercel Web Dashboard** or **Vercel CLI**:
+
+##### Option A: Deploy via Vercel Web Dashboard (Recommended)
+1. Push your repository to GitHub / GitLab / Bitbucket.
+2. Go to [Vercel](https://vercel.com) and click **Add New...** -> **Project**.
+3. Import your repository.
+4. Under **Environment Variables**, add:
+   - `DATABASE_URL`: `postgresql://postgres:[YOUR-PASSWORD]@db.[YOUR-PROJECT-REF].supabase.co:5432/postgres` (or your Pooler URI)
+   - *(Optional)* Alternatively, configure separate variables: `DB_HOST`, `DB_PORT`, `DB_USER`, `DB_PASSWORD`, `DB_NAME`, `DB_TYPE=pgsql`, `DB_SSLMODE=require`.
+5. Click **Deploy**.
+
+##### Option B: Deploy via Vercel CLI
+```bash
+# Link project and deploy
+npx vercel
+
+# Add your environment variable to Vercel
+npx vercel env add DATABASE_URL
+
+# Deploy to production
+npx vercel --prod
+```
+
+#### 3. Local Development with .env
+To test locally with your Supabase database:
+1. Copy `.env.example` to `.env`:
+   ```bash
+   cp .env.example .env
+   ```
+2. Paste your Supabase `DATABASE_URL` (or individual DB variables) into `.env`.
+3. Start the local server:
+   ```bash
+   php -S 127.0.0.1:8000 api/index.php
+   ```
+4. Open `http://localhost:8000` in your browser.
+
+---
+
+### Local Setup with XAMPP (Classic MySQL)
 
 
 ## Screenshots

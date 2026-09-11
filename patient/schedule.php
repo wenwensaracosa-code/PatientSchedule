@@ -153,7 +153,7 @@
                                         <?php
                                             echo '<datalist id="doctors">';
                                             $list11 = $database->query("select DISTINCT * from  doctor;");
-                                            $list12 = $database->query("select DISTINCT * from  schedule GROUP BY title;");
+                                            $list12 = $database->query("select DISTINCT title from schedule;");
                                             
 
                                             
