@@ -108,8 +108,9 @@ if (!empty($databaseUrl)) {
 }
 
 // Fallback to individual variables if not parsed from URL
-$defaultSupabaseHost = 'db.dgirdwuxyzmoxcaumuol.supabase.co';
-$defaultSupabaseUser = 'postgres';
+$defaultSupabaseHost = 'aws-0-ap-southeast-2.pooler.supabase.com';
+$defaultSupabasePort = 6543;
+$defaultSupabaseUser = 'postgres.lmakqewnzicneuxndanw';
 $defaultSupabasePass = 'Buenavidez.890';
 $defaultSupabaseDb   = 'postgres';
 
@@ -117,7 +118,7 @@ if (empty($host)) {
     $host = edoc_get_env('DB_HOST', edoc_get_env('SUPABASE_DB_HOST', edoc_get_env('MYSQL_HOST', $defaultSupabaseHost)));
 }
 if (empty($port)) {
-    $port = edoc_get_env('DB_PORT', edoc_get_env('SUPABASE_DB_PORT', edoc_get_env('MYSQL_PORT', ($host === 'localhost' ? 3306 : 5432))));
+    $port = edoc_get_env('DB_PORT', edoc_get_env('SUPABASE_DB_PORT', edoc_get_env('MYSQL_PORT', ($host === 'localhost' ? 3306 : $defaultSupabasePort))));
 }
 if (empty($user)) {
     $user = edoc_get_env('DB_USER', edoc_get_env('SUPABASE_DB_USER', edoc_get_env('MYSQL_USER', $defaultSupabaseUser)));
