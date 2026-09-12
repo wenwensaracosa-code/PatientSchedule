@@ -165,7 +165,7 @@
                         </td>
                         <td width="30%">
                         <select name="docid" id="" class="box filter-container-items" style="width:90% ;height: 37px;margin: 0;" >
-                            <option value="" disabled selected hidden>Choose Doctor Name from the list</option><br/>
+                            <option value="" disabled selected hidden>Choose a doctor</option><br/>
                                 
                             <?php 
                              
@@ -299,7 +299,7 @@
                                     
                                     <br>
                                     <p class="heading-main12" style="margin-left: 45px;font-size:20px;color:rgb(49, 49, 49)">We  couldnt find anything related to your keywords !</p>
-                                    <a class="non-style-link" href="appointment.php"><button  class="login-btn btn-primary-soft btn"  style="display: flex;justify-content: center;align-items: center;margin-left:20px;">&nbsp; Show all Appointments &nbsp;</font></button>
+                                    <a class="non-style-link" href="appointment.php"><button  class="login-btn btn-primary-soft btn"  style="display: flex;justify-content: center;align-items: center;margin-left:20px;">&nbsp; Show all appointments &nbsp;</font></button>
                                     </a>
                                     </center>
                                     <br><br><br><br>
@@ -419,7 +419,7 @@
                             <tr>
                                 <td class="label-td" colspan="2">
                                     <select name="docid" id="" class="box" >
-                                    <option value="" disabled selected hidden>Choose Doctor Name from the list</option><br/>';
+                                    <option value="" disabled selected hidden>Choose a doctor</option><br/>';
                                         
         
                                         $list11 = $database->query("select  * from  doctor;");

@@ -170,11 +170,27 @@ body{
 .sub-table{
     border: 1px solid #ebebeb;
     border-radius: 8px;
+  display: block;
+  width: 100% !important;
   max-width: 100%;
   overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+.sub-table > tbody{
+  display: table;
+  min-width: 620px;
+  width: 100%;
+}
+
+.sub-table td,
+.sub-table th{
+  overflow-wrap: anywhere;
 }
 
 .filter-container{
+  display: block;
   width: min(92.5%, 1100px);
   max-width: 100%;
   border: 1px solid #ebebeb;
@@ -182,6 +198,13 @@ body{
   margin-bottom: 20px;
   border-spacing: 0;
   padding: 0;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.filter-container > tbody{
+  display: table;
+  width: 100%;
 }
 
 .filter-container-items{
@@ -606,6 +629,12 @@ input[type=search]:focus {
 @media screen and (max-width: 700px){
   .filter-container{
     width: 100%;
+  }
+  .filter-container > tbody{
+    min-width: 520px;
+  }
+  .sub-table > tbody{
+    min-width: 620px;
   }
   .filter-container-items{
     margin-left: 0;

@@ -43,7 +43,7 @@ if($_POST){
             exit;
         }
     }else{
-        $error='<label for="promter" class="form-label" style="color:rgb(255, 62, 62);text-align:center;">Password Conformation Error! Reconform Password</label>';
+        $error='<label for="promter" class="form-label" style="color:rgb(255, 62, 62);text-align:center;">Password confirmation error. Please re-enter your passwords.</label>';
     }
 }else{
     $error='<label for="promter" class="form-label"></label>';
@@ -74,7 +74,7 @@ if($_POST){
             <tr>
                 <td colspan="2">
                     <p class="header-text">Let's Get Started</p>
-                    <p class="sub-text">It's Okey, Now Create User Account.</p>
+                    <p class="sub-text">Create your account to continue.</p>
                 </td>
             </tr>
             <tr>
@@ -111,12 +111,12 @@ if($_POST){
             </tr>
             <tr>
                 <td class="label-td" colspan="2">
-                    <label for="cpassword" class="form-label">Conform Password: </label>
+                    <label for="cpassword" class="form-label">Confirm Password: </label>
                 </td>
             </tr>
             <tr>
                 <td class="label-td" colspan="2">
-                    <input type="password" name="cpassword" class="input-text" placeholder="Conform Password" required>
+                    <input type="password" name="cpassword" class="input-text" placeholder="Confirm Password" required>
                 </td>
             </tr>
      

@@ -204,7 +204,7 @@
                                 
                                 <th class="table-headin">
                                     
-                                    Sheduled Date & Time
+                                    Scheduled Date &amp; Time
                                     
                                 </th>
                                 <th class="table-headin">
@@ -444,7 +444,7 @@
                                              
                                              <br>
                                              <p class="heading-main12" style="margin-left: 45px;font-size:20px;color:rgb(49, 49, 49)">We  couldnt find anything related to your keywords !</p>
-                                             <a class="non-style-link" href="appointment.php"><button  class="login-btn btn-primary-soft btn"  style="display: flex;justify-content: center;align-items: center;margin-left:20px;">&nbsp; Show all Appointments &nbsp;</font></button>
+                                             <a class="non-style-link" href="appointment.php"><button  class="login-btn btn-primary-soft btn"  style="display: flex;justify-content: center;align-items: center;margin-left:20px;">&nbsp; Show all appointments &nbsp;</font></button>
                                              </a>
                                              </center>
                                              <br><br><br><br>

@@ -277,7 +277,7 @@
                                                 </th>
                                                 
                                                 <th class="table-headin">
-                                                Sheduled Date
+                                                Scheduled Date
                                                 </th>
                                                 <th class="table-headin">
                                                     

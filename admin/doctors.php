@@ -103,7 +103,7 @@
                         
                         <form action="" method="post" class="header-search">
 
-                            <input type="search" name="search" class="input-text header-searchbar" placeholder="Search Doctor name or Email" list="doctors">&nbsp;&nbsp;
+                            <input type="search" name="search" class="input-text header-searchbar" placeholder="Search by doctor name or email" list="doctors">&nbsp;&nbsp;
                             
                             <?php
                                 echo '<datalist id="doctors">';
@@ -407,7 +407,7 @@
                 $error_1=$_GET["error"];
                 $errorlist= array(
                     '1'=>'<label for="promter" class="form-label" style="color:rgb(255, 62, 62);text-align:center;">Already have an account for this Email address.</label>',
-                    '2'=>'<label for="promter" class="form-label" style="color:rgb(255, 62, 62);text-align:center;">Password Conformation Error! Reconform Password</label>',
+                    '2'=>'<label for="promter" class="form-label" style="color:rgb(255, 62, 62);text-align:center;">Password confirmation error. Please re-enter your passwords.</label>',
                     '3'=>'<label for="promter" class="form-label" style="color:rgb(255, 62, 62);text-align:center;"></label>',
                     '4'=>"",
                     '0'=>'',
@@ -478,7 +478,7 @@
                             </tr>
                             <tr>
                                 <td class="label-td" colspan="2">
-                                    <label for="spec" class="form-label">Choose specialties: </label>
+                                    <label for="spec" class="form-label">Choose a specialty: </label>
                                     
                                 </td>
                             </tr>
@@ -509,16 +509,16 @@
                             </tr>
                             <tr>
                                 <td class="label-td" colspan="2">
-                                    <input type="password" name="password" class="input-text" placeholder="Defind a Password" required><br>
+                                    <input type="password" name="password" class="input-text" placeholder="Create a password" required><br>
                                 </td>
                             </tr><tr>
                                 <td class="label-td" colspan="2">
-                                    <label for="cpassword" class="form-label">Conform Password: </label>
+                                    <label for="cpassword" class="form-label">Confirm Password: </label>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="label-td" colspan="2">
-                                    <input type="password" name="cpassword" class="input-text" placeholder="Conform Password" required><br>
+                                    <input type="password" name="cpassword" class="input-text" placeholder="Confirm Password" required><br>
                                 </td>
                             </tr>
                             
@@ -583,7 +583,7 @@
             $error_1=$_GET["error"];
                 $errorlist= array(
                     '1'=>'<label for="promter" class="form-label" style="color:rgb(255, 62, 62);text-align:center;">Already have an account for this Email address.</label>',
-                    '2'=>'<label for="promter" class="form-label" style="color:rgb(255, 62, 62);text-align:center;">Password Conformation Error! Reconform Password</label>',
+                    '2'=>'<label for="promter" class="form-label" style="color:rgb(255, 62, 62);text-align:center;">Password confirmation error. Please re-enter your passwords.</label>',
                     '3'=>'<label for="promter" class="form-label" style="color:rgb(255, 62, 62);text-align:center;"></label>',
                     '4'=>"",
                     '0'=>'',
@@ -659,7 +659,7 @@
                                     </tr>
                                     <tr>
                                         <td class="label-td" colspan="2">
-                                            <label for="spec" class="form-label">Choose specialties: (Current'.$spcil_name.')</label>
+                                            <label for="spec" class="form-label">Choose a specialty (current: '.$spcil_name.')</label>
                                             
                                         </td>
                                     </tr>
@@ -690,16 +690,16 @@
                                     </tr>
                                     <tr>
                                         <td class="label-td" colspan="2">
-                                            <input type="password" name="password" class="input-text" placeholder="Defind a Password" required><br>
+                                            <input type="password" name="password" class="input-text" placeholder="Create a password" required><br>
                                         </td>
                                     </tr><tr>
                                         <td class="label-td" colspan="2">
-                                            <label for="cpassword" class="form-label">Conform Password: </label>
+                                            <label for="cpassword" class="form-label">Confirm Password: </label>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td class="label-td" colspan="2">
-                                            <input type="password" name="cpassword" class="input-text" placeholder="Conform Password" required><br>
+                                            <input type="password" name="cpassword" class="input-text" placeholder="Confirm Password" required><br>
                                         </td>
                                     </tr>
                                     

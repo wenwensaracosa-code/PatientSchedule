@@ -135,7 +135,7 @@
                     <a href="appointment.php" ><button  class="login-btn btn-primary-soft btn btn-icon-back"  style="padding-top:11px;padding-bottom:11px;margin-left:20px;width:125px"><font class="tn-in-text">Back</font></button></a>
                     </td>
                     <td>
-                        <p style="font-size: 23px;padding-left:12px;font-weight: 600;">My Bookings history</p>
+                        <p style="font-size: 23px;padding-left:12px;font-weight: 600;">My Booking History</p>
                                            
                     </td>
                     <td width="15%">
@@ -232,7 +232,7 @@
                                     
                                     <br>
                                     <p class="heading-main12" style="margin-left: 45px;font-size:20px;color:rgb(49, 49, 49)">We  couldnt find anything related to your keywords !</p>
-                                    <a class="non-style-link" href="appointment.php"><button  class="login-btn btn-primary-soft btn"  style="display: flex;justify-content: center;align-items: center;margin-left:20px;">&nbsp; Show all Appointments &nbsp;</font></button>
+                                    <a class="non-style-link" href="appointment.php"><button  class="login-btn btn-primary-soft btn"  style="display: flex;justify-content: center;align-items: center;margin-left:20px;">&nbsp; Show all appointments &nbsp;</font></button>
                                     </a>
                                     </center>
                                     <br><br><br><br>
