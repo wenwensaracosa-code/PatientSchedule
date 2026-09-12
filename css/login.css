@@ -1,13 +1,13 @@
 
 body{
-    margin: 7%;
+    margin: clamp(16px, 7vw, 7%);
     background-color: #F6F7FA;
 }
 
 
 
 .container{
-    width: 45%;
+    width: min(100%, 520px);
     background-color: white;
     border: 1px solid rgb(235, 235, 235);
     border-radius: 8px;
@@ -16,6 +16,21 @@ body{
     box-shadow: 0 3px 5px 0 rgba(240, 240, 240, 0.3);
     animation: transitionIn-Y-over 0.5s;
 
+}
+
+@media screen and (max-width: 600px){
+    body{
+        margin: 16px;
+    }
+    .container{
+        width: 100%;
+    }
+    .container table{
+        width: calc(100% - 24px) !important;
+    }
+    .header-text{
+        font-size: 25px;
+    }
 }
 td{
     text-align: center;

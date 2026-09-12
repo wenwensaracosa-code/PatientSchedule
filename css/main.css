@@ -11,7 +11,7 @@ body{
     padding: 0;
     border-spacing: 0;
     font-family: 'Inter', sans-serif;
-    
+    overflow-x: hidden;
 }
 
 *, ::after, ::before{
@@ -170,11 +170,13 @@ body{
 .sub-table{
     border: 1px solid #ebebeb;
     border-radius: 8px;
-    
+  max-width: 100%;
+  overflow-x: auto;
 }
 
 .filter-container{
-  width: 92.5%;
+  width: min(92.5%, 1100px);
+  max-width: 100%;
   border: 1px solid #ebebeb;
   border-radius: 8px;
   margin-bottom: 20px;
@@ -227,7 +229,9 @@ body{
     padding: 20px;
     background: #fff;
     border-radius: 5px;
-    width: 50%;
+    width: min(50%, 640px);
+    max-height: calc(100vh - 32px);
+    overflow-y: auto;
     position: relative;
     transition: all 5s ease-in-out;
   }
@@ -555,7 +559,8 @@ input[type=search]:focus {
 .search-items{
   padding:20px;
   margin:10px;
-  width:95%;
+  width: min(95%, 1100px);
+  max-width: 100%;
   display: flex;
   padding-left:0;
   padding-left: 30px;
@@ -596,4 +601,25 @@ input[type=search]:focus {
   background-position: 68% 50%;
   background-repeat: no-repeat;
   transition: 0.5s;
+}
+
+@media screen and (max-width: 700px){
+  .filter-container{
+    width: 100%;
+  }
+  .filter-container-items{
+    margin-left: 0;
+  }
+  .popup{
+    width: calc(100% - 32px);
+    margin: 16px auto;
+  }
+  .search-items{
+    margin: 10px 0;
+    padding: 14px;
+  }
+  .abc{
+    height: auto;
+    max-height: 550px;
+  }
 }

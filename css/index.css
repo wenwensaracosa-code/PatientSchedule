@@ -85,3 +85,37 @@ table{
     font-size: 13px;
     animation: transitionIn-Y-over 0.5s;
 }
+
+@media screen and (max-width: 600px){
+    .full-height{
+        min-height: 100vh;
+        height: auto;
+        padding: 0 12px 56px;
+    }
+    .heading-text{
+        font-size: 30px;
+        line-height: 1.2;
+        margin-top: 28vh;
+    }
+    .sub-text2{
+        font-size: 15px;
+        line-height: 1.6;
+    }
+    .edoc-logo{
+        display: block;
+        padding-left: 0;
+        font-size: 18px;
+    }
+    .edoc-logo-sub{
+        display: block;
+        font-size: 10px;
+    }
+    .nav-item{
+        font-size: 12px;
+    }
+    .footer-hashen{
+        left: 0;
+        width: 100%;
+        text-align: center;
+    }
+}

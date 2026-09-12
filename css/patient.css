@@ -6,19 +6,21 @@ body{
 .container{
     display: flex;
     flex-wrap: wrap;
-    height: 100vh;
+    min-height: 100vh;
 
 
 }
 .menu{
     border-right: 1.5px solid rgb(235, 235, 235);
-    width: 24%;
-    height: 100%;
+    flex: 0 0 24%;
+    min-height: 100vh;
     box-shadow: 0 0px 0px 2px rgba(240, 240, 240, 0.3);
 }
 .dash-body{
-    width: 76%;
-    height: 100%;
+    flex: 1 1 76%;
+    min-width: 0;
+    min-height: 100vh;
+    overflow-x: hidden;
 }
 
 .menu-container{
@@ -121,13 +123,88 @@ body{
 .header-search{
     display: flex;
     justify-content: center;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
 
     
 }
 .header-searchbar{
-    width: 40%;
+    flex: 1 1 220px;
+    width: auto;
     background-color: rgba(255, 255, 255, 0.705);
     border: 0.5px solid rgba(190, 190, 190, 0.884);
     
     
+}
+
+@media screen and (max-width: 900px){
+    .menu{
+        flex-basis: 180px;
+    }
+    .dash-body{
+        flex-basis: calc(100% - 180px);
+    }
+    .profile-title{
+        font-size: 17px;
+    }
+    .profile-subtitle{
+        font-size: 12px;
+        overflow-wrap: anywhere;
+    }
+    .menu-text{
+        padding-left: 34%;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 640px){
+    .container{
+        display: block;
+    }
+    .menu,
+    .dash-body{
+        width: 100%;
+        min-height: 0;
+    }
+    .menu{
+        border-right: 0;
+        border-bottom: 1px solid rgb(235, 235, 235);
+        position: static;
+    }
+    .profile-container{
+        padding: 12px 0;
+    }
+    .menu-row{
+        display: inline-block;
+        width: 20%;
+        vertical-align: top;
+    }
+    .menu-btn{
+        min-height: 58px;
+        background-position: center 8px;
+        background-size: 20px;
+        padding: 30px 2px 4px;
+        text-align: center;
+    }
+    .menu-text{
+        padding: 0;
+        margin: 0;
+        font-size: 11px;
+        line-height: 1.2;
+    }
+    .menu-active{
+        border-right: 0;
+        border-bottom: 3px solid var(--primarycolor);
+    }
+    .dash-body{
+        overflow-x: hidden;
+        padding: 0 10px 24px;
+    }
+    .header-search{
+        width: 100%;
+    }
+    .header-searchbar{
+        flex-basis: 100%;
+    }
 }
